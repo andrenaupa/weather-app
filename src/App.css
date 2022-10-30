@@ -1,0 +1,192 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: greenyellow;
+  background-image: url('./assets/img/huascaran-two.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Loader */
+.loader {
+  width: 120px;
+  height: 120px;
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #3498db;
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+  transition: all 0.3s ease-in-out;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.card {
+  width: 90%;
+  height: 55%;
+  max-width: 580px;
+  max-height: 600px;
+  box-shadow: 0 0 10px #06283d;
+  background-color: rgba(223, 246, 255, 0.5);
+  backdrop-filter: blur(10px);
+  padding: 15px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+
+/*title*/
+
+.title {
+  text-align: center;
+  
+}
+
+.title-app {
+  color: #06283d;
+}
+
+.country-city {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.description {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 14px;
+  color: #1363df;
+  text-shadow: 0 0 1px black;
+}
+
+/*info-container*/
+
+.info-container {
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.temperature {
+  font-size: 32px;
+  margin-bottom: 4px;
+  font-weight: 500;
+  color: #06283d;
+}
+
+.temperature-min-max {
+  margin-bottom: 4px;
+  font-weight: 400;
+  color: #06283d;
+}
+
+/*icon-weather-container*/
+
+.icon-weather-container {
+  text-align: center;
+}
+
+.icon-weather-api {
+  width: 60%;
+  max-width: 60%;
+  /* border: 1px solid red; */
+  box-shadow: 0 0 10px #06283d;
+  border-radius: 50%;
+}
+
+/*detail*/
+
+.detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-data {
+  display: flex;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.icons {
+  width: 25px;
+  text-align: center;
+  margin-right: 4px;
+}
+
+.detail-data-values {
+  margin-left: 5px;
+  font-weight: 500;
+  color: #06283d;
+}
+
+button {
+  align-self: center;
+  padding: 6px 10px;
+  width: max-content;
+  border: none;
+  cursor: pointer;
+  background-color: #1363df;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  font-size: 15px;
+}
+
+
+button:hover {
+  box-shadow: none;
+}
+
+
+@media  screen and (min-width: 430px) {
+
+  .card {
+    max-height: 460px;
+    max-width: 550px;
+  }
+
+  .description {
+    margin-top: 40px;
+    font-size: 16px;
+  }
+
+  .info-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+  }
+
+  button {
+    margin-bottom: 15px;
+  }
+
+  .detail {
+    font-size: 17px;
+  }
+}
